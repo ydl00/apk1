@@ -1,1 +1,1 @@
-微信.apk.1 安装器
+Android  非 .apk 安装器
