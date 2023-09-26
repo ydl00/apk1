@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:allowBackup="false"
+        android:allowClearUserData="false"
+        android:icon="@android:mipmap/sym_def_app_icon"
+        android:label="非APK安装器"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Light">
+        <activity
+            android:name="pub.ydl.apk1.InstallActivity"
+            android:exported="true"
+            android:launchMode="singleInstance">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/vnd.android.package-archive" />
+                <data android:mimeType="application/*" />
+
+            </intent-filter>
+
+
+        </activity>
+    </application>
+
+</manifest>
