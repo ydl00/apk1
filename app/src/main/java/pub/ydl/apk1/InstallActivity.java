@@ -12,12 +12,9 @@ public class InstallActivity extends Activity{
 @Override
 protected void onCreate (Bundle savedInstanceState){
     super.onCreate(savedInstanceState);
-    //    setContentView(R.layout.activity_main);
-
 
     install(getIntent());
     finish();
-
 }
 
 
@@ -37,14 +34,12 @@ protected void install (Intent in){
     }
 
 
-
     Uri dataUri=in.getData();
 
     Intent intent=new Intent(Intent.ACTION_VIEW);
 
     //新栈中打开
     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
 
     if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
         //区别于 FLAG_GRANT_READ_URI_PERMISSION 跟 FLAG_GRANT_WRITE_URI_PERMISSION，
